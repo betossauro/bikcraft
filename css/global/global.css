@@ -6,8 +6,13 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
 ul,
-p {
+p,
+dd,
+blockquote {
   margin: 0px;
 }
 
@@ -23,5 +28,11 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+/* Tudo que terminar com jpg */
+img[src$=".jpg"] {
+  border-radius: 4px;
 }
