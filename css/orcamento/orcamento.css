@@ -123,7 +123,7 @@
 #bikcraft:checked ~ #orcamento-bikcraft,
 #seguro:checked ~ #orcamento-seguro {
     display: grid;
-    gap: 20px;
+    gap: 16px;
 }
 
 .orcamento-detalhes {
