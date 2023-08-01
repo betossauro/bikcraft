@@ -65,3 +65,21 @@ galeria.forEach(eventosGaleria);
 if(window.SimpleAnime){
     new SimpleAnime();
 }
+
+async function buscarCEP(cep) {
+    let options = {
+        method: 'GET',
+        headers: {'Content-type': 'application/json'}
+    };
+
+    const promiseConsultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`, options); 
+
+    const json = await promiseConsultaCEP.json();
+    document.getElementById('logradouro').setAttribute('value', json.logradouro);
+    document.getElementById('bairro').setAttribute('value', json.bairro);
+    document.getElementById('cidade').setAttribute('value', json.localidade);
+    document.getElementById('estado').setAttribute('value', json.uf);
+
+
+    console.log(json);
+}
